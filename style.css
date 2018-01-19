@@ -1,83 +1,92 @@
-/*img#nyc{*/
-/*    width:900px;*/
-/*    height:900px;*/
-/*}*/
 
-
-/*#kid {*/
-/*  width:200px;*/
-/*  height:200px;*/
-/*  margin-left: auto;*/
-/*  margin-right: auto;*/
-/*  display: block;*/
-/*  border: 10px solid black;*/
-/*  left:100px;*/
-/*  top:100px;*/
-/*  padding-bottom:1px;*/
-/*  padding-left:1px;*/
-/*  padding-right:1px;*/
-/*  padding-top:1px;*/
-/*}*/
-/*#tom {*/
-/*  width:200px;*/
-/*  height:200px;*/
-/*  margin-left: auto;*/
-/*  margin-right: auto;*/
-/*  display: block;*/
-/*  border: 10px solid black;*/
-/*  left:700px;*/
-/*  top:100px;*/
-/*  padding-bottom:1px;*/
-/*  padding-left:1px;*/
-/*  padding-right:1px;*/
-/*  padding-top:1px;*/
-/*  float:;*/
-/*}*/
 
 h1{
-  color:white;
-  text-shadow: 2px 2px pink;
+  color:white;/*makes color of h1 white*/
+  text-shadow: 2px 2px pink;/*sets the text shadow to pink*/
 }
 h2{
-  color:white;
-  margin-top: 100px;
+  color:white;/*makes color of h2 white*/
+  margin-top: 150px;/*makes margin-top of h2 150px so that it will be in a specifc position*/
 }
-/*box{*/
-/*  width:100px;*/
-/*  height:100px;*/
-/*  color:black;*/
-/*}*/
+
 #div1{
-  position:relative;
-  background-color:red;
-  height:100px;
-  width:100px;
-  /*-webkit-transition: width 2s;*/
-  /*transition: width 2s;*/
+  position:relative;/*puts div1 in the same spot even if page is scrolled*/
+  background-color:red;/*color of div1 = red*/
+  height:100px;/*sets height 100px*/
+  width:100px;/*sets width to 100px*/
   -webkit-transition:-webkit-transform 3s; /* Safari */
-  transition: transform 3s;
-  margin-top:100px;
-  margin-left:170px
+  transition: transform 3s; /*makes the transition/transform 3 seconds long*/
+  margin-top:100px;/*makes margin-top 100px*/
+  margin-left:170px/*makes margin-left 170px*/
   
 }
 
 #div2{
-  position: relative;
-  background-color:red;
-  height:100px;
-  width:100px;
+  position: relative;/*puts div1 in the same spot even if page is scrolled*/
+  background-color:red;/*color of div2 = red*/
+  height:100px;/*sets height 100px*/
+  width:100px;/*sets width to 100px*/
   -webkit-transition:-webkit-transform 3s; /* Safari */
-  transition: transform 3s;
-  margin-top:-97px;
-  margin-left:525px;
+  transition: transform 3s;/*makes the transition/transform 3 seconds long*/
+  margin-top:-97px;/*makes margin-top -97px*/
+  margin-left:525px;/*makes margin-left 525px*/
 }
 
-#div1:hover {
-    -webkit-transform:rotateX(3600deg); /* Safari */
-    transform: rotateX(360deg)
+#div1:hover { /*anything below will happen when mouse is hovered*/
+    -webkit-transform:rotateX(3600deg); /*rotates div1 on the x axis*/
+    transform: rotateX(360deg) /*rotates div1 on the x axis*/
 }
 #div2:hover {
-    -webkit-transform:rotateX(3600deg); /* Safari */
-    transform: rotateX(360deg)
+    -webkit-transform:rotateX(3600deg); /*rotates div2 on the x axis*/
+    transform: rotateX(360deg)/*rotates div2 on the x axis*/
 }
+.ball{/*sets up the balls that rotate*/
+      background-color:red;/*makes the balls red*/
+      border-radius: 50%;
+    	width: 20px;/*sets width to 20px*/
+    	height: 20px;/*sets height to 20px*/
+    	position: relative;/*makes it so they stay in place even if page is scrolled*/
+    }
+    
+    #ball1{/*ball number 1*/
+      left:135px; /*starting position for ball*/
+      top:-85px; /*starting position for ball*/
+      animation: ball1 2s linear 1s infinite; /*sets up the animation so it lasts forever*/
+    }
+    
+    #ball2{
+      animation: ball2 2s linear 0s infinite;/*sets up animation so it lasts forever*/
+    }
+    
+    
+    button{
+      position:relative; /*makes it stay in place*/
+      top: 200px;
+      width: 100%;
+      height: 50px;
+      background-color: red;
+      border: none;
+      color: white;
+    }
+    
+    button:hover{
+      background-color: lightblue; /*when its hovered it will turn light blue*/
+      color: black;/*text will turn black*/
+    }
+    
+    @-webkit-keyframes ball1 {/*sets up the ball animation*/
+    0%   {background-color:red; left:135px; top:-100px;}/*top left it will be red*/
+    25%  {background-color:yellow; left:625px; top:-100px;}/*top right it will be yellow*/
+    50%  {background-color:blue; left:625px; top:0px;}/*bottom right it will be blue*/
+    75%  {background-color:green; left:135px; top:0px;}/*bottom left it will be green*/
+    100% {background-color:red; left:135px; top:-100px;}/*returns back to start color*/
+    }
+    
+    @-webkit-keyframes ball2 {
+    0%   {background-color:red; left:135px; top:-100px;}/*top left it will be red*/
+    25%  {background-color:yellow; left:625px; top:-100px;}/*top right it will be yellow*/
+    50%  {background-color:blue; left:625px; top:0px;}/*bottom right it will be blue*/
+    75%  {background-color:green; left:135px; top:0px;}/*bottom left it will be green*/
+    100% {background-color:red; left:135px; top:-100px;}/*returns back to start color*/
+    }
 
