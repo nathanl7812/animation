@@ -47,11 +47,37 @@ h2{
 /*  height:100px;*/
 /*  color:black;*/
 /*}*/
-#square {
-	width: 100px;
-	height: 100px;
-	background: red;
+#div1{
+  position:relative;
+  background-color:red;
+  height:100px;
+  width:100px;
+  /*-webkit-transition: width 2s;*/
+  /*transition: width 2s;*/
+  -webkit-transition:-webkit-transform 3s; /* Safari */
+  transition: transform 3s;
+  margin-top:100px;
+  margin-left:170px
+  
 }
-#square{
-  margin-left: 100px;
+
+#div2{
+  position: relative;
+  background-color:red;
+  height:100px;
+  width:100px;
+  -webkit-transition:-webkit-transform 3s; /* Safari */
+  transition: transform 3s;
+  margin-top:-97px;
+  margin-left:525px;
 }
+
+#div1:hover {
+    -webkit-transform:rotateX(3600deg); /* Safari */
+    transform: rotateX(360deg)
+}
+#div2:hover {
+    -webkit-transform:rotateX(3600deg); /* Safari */
+    transform: rotateX(360deg)
+}
+
